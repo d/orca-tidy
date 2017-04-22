@@ -1,0 +1,14 @@
+dist: trusty
+addons:
+  apt:
+    sources:
+      llvm-toolchain-trusty
+    packages:
+      - ccache
+      - clang-format-5.0
+cache:
+  - ccache
+language: cpp
+before_script: sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-5.0 500
+script:
+  - clang-format -version
