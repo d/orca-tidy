@@ -1,4 +1,5 @@
 dist: trusty
+sudo: false
 addons:
   apt:
     sources:
@@ -9,6 +10,8 @@ addons:
 cache:
   - ccache
 language: cpp
-before_script: sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-5.0 500
+env:
+  - CLANG_FORMAT=clang-format-5.0
+before_script: ci/prerequisite_info.bash
 script:
-  - clang-format -version
+  - ci/lint.bash
