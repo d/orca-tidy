@@ -3,8 +3,8 @@
 set -e -x -u -o pipefail
 
 _main() {
-    cpplint
     clang_format
+    cpplint
 }
 
 cpplint() {
