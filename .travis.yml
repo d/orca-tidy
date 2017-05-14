@@ -12,6 +12,7 @@ cache:
 language: cpp
 env:
   - CLANG_FORMAT=clang-format-5.0
+  - CLANG_TIDY=clang-tidy-5.0
 before_script: ci/prerequisite_info.bash
 script:
   - ci/lint.bash

@@ -1,0 +1,8 @@
+---
+Checks:          'clang-diagnostic-*,clang-analyzer-*,google-*'
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+AnalyzeTemporaryDtors: false
+User:            jesse
+...
+
